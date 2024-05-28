@@ -21,7 +21,7 @@ from Student S, Student Super
 
 
 -- 4. display with isnull 
-select s.St_Id,s.St_Fname + ' ' + Isnull(s.St_Lname,', no Lname') [Full Name] ,d.Dept_Name -- maybe i use concat also but it's fine 
+select s.St_Id,s.St_Fname + ' ' + Isnull(s.St_Lname,', no Lname') [Full Name] ,d.Dept_Name -- maybe i use concat also but it's ok
 from Student s join Department d
     on s.Dept_Id = d.Dept_Id -- fl = pk
 
