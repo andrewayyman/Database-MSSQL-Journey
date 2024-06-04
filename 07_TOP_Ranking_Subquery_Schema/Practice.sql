@@ -25,14 +25,14 @@ from Instructor
 order by Salary desc
 
 
---4.Write a query to select the highest two salaries in Each Department for instructors who have salaries. ìusing one of Ranking Functionsî
+--4.Write a query to select the highest two salaries in Each Department for instructors who have salaries. ‚Äúusing one of Ranking Functions‚Äù
 select * 
 from (
 select salary, Dept_Id, ROW_NUMBER() over ( partition by dept_id order by salary desc ) as r1
 from Instructor ) as newtable
 where r1 <= 2 
 
---5.Write a query to select a random  student from each department.  ìusing one of Ranking Functionsî
+--5.Write a query to select a random  student from each department.  ‚Äúusing one of Ranking Functions‚Äù
 select *
 from (
 select St_Fname, Dept_Id, ROW_NUMBER() over (partition by dept_id order by newid() ) as r1
@@ -86,7 +86,7 @@ where E.SSN = D.ESSN and exists(Select Essn from Dependent)
 -- Restore adventureworks2012 Database 
 use adventureworks2012
 
--- 1.Display the SalesOrderID, ShipDate of the SalesOrderHearder table (Sales schema) to designate SalesOrders that occurred within the period ë7/28/2002í and ë7/29/2014í
+-- 1.Display the SalesOrderID, ShipDate of the SalesOrderHearder table (Sales schema) to designate SalesOrders that occurred within the period ‚Äò7/28/2002‚Äô and ‚Äò7/29/2014‚Äô
 select SalesOrderID , ShipDate
 from sales.SalesOrderHeader
 where OrderDate between '7/28/2002' and '7/29/2014'
