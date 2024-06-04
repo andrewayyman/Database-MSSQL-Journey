@@ -1,4 +1,4 @@
-/**====================================== Demo Assignment 07 =====================================================*/
+/**====================================== Demo =====================================================*/
 Use ITI
 
 /* == Demo Content ==
@@ -113,7 +113,7 @@ where St_Id in (
     - Keyword to get the top rows 
     - No key words named bottom 
     - The TOP keyword is used to limit the number of rows returned by a query.
-    - Top PErcentage => SELECT TOP 10 PERCENT * FROM Employees; – returns the top 10% of rows.
+    - Top PErcentage => SELECT TOP 10 PERCENT * FROM Employees; â€“ returns the top 10% of rows.
 
 
 
