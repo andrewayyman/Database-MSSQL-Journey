@@ -1,4 +1,4 @@
---====================================================== Assignment 08 ===================================================================
+--====================================================== Practice 08 ===================================================================
 /*
     - Part01 : Functions
     - Part02 : Views 
@@ -188,7 +188,7 @@ As
 --RUN
 SELECT * FROM DBO.ManagersWithTopics
 
---3.Create a view that will display Instructor Name, Department Name for the ‘SD’ or ‘Java’ Department “use Schema binding” and describe what is the meaning of Schema Binding
+--3.Create a view that will display Instructor Name, Department Name for the â€˜SDâ€™ or â€˜Javaâ€™ Department â€œuse Schema bindingâ€ and describe what is the meaning of Schema Binding
 
 CREATE OR ALTER VIEW InsOfSdJavaDept
 with encryption as
@@ -218,7 +218,7 @@ as
 select * from EmployeesInProjects
 
 
---1.Create a view named   “v_clerk” that will display employee Number ,project Number, the date of hiring of all t-he jobs of the type 'Clerk'.
+--1.Create a view named   â€œv_clerkâ€ that will display employee Number ,project Number, the date of hiring of all t-he jobs of the type 'Clerk'.
 use [SD32-Company] 
 
 
@@ -231,7 +231,7 @@ AS
 select * from v_clerk
 
 
---2.Create view named  “v_without_budget” that will display all the projects data without budget
+--2.Create view named  â€œv_without_budgetâ€ that will display all the projects data without budget
 
 create or alter view v_without_budget
 as
@@ -241,7 +241,7 @@ as
 select * from v_without_budget
 
 
---3.Create view named  “v_count “ that will display the project name and the Number of jobs in it
+--3.Create view named  â€œv_count â€œ that will display the project name and the Number of jobs in it
 create or alter view v_count 
 as
 	SELECT P.ProjectName ,  COUNT(W.Job) as [num of jops]
@@ -252,7 +252,7 @@ as
 select * from v_count
 
 
---4.Create view named ” v_project_p2” that will display the emp# s for the project# ‘p2’ . (use the previously created view  “v_clerk”)
+--4.Create view named â€ v_project_p2â€ that will display the emp# s for the project# â€˜p2â€™ . (use the previously created view  â€œv_clerkâ€)
 
 create or alter view  v_project_p2 
 AS
@@ -263,7 +263,7 @@ AS
 select * from v_project_p2
 
 
---5.modify the view named  “v_without_budget”  to display all DATA in project p1 and p2.
+--5.modify the view named  â€œv_without_budgetâ€  to display all DATA in project p1 and p2.
 
 alter view v_without_budget
 as
@@ -273,13 +273,13 @@ as
 select * from v_without_budget
 
 
---6.Delete the views  “v_ clerk” and “v_count”
+--6.Delete the views  â€œv_ clerkâ€ and â€œv_countâ€
 
 DROP VIEW v_clerk 
 DROP VIEW v_count
 
 
---7.Create view that will display the emp# and emp last name who works on deptNumber is ‘d2’
+--7.Create view that will display the emp# and emp last name who works on deptNumber is â€˜d2â€™
 
 create or alter view employeeData 
 AS
@@ -290,14 +290,14 @@ AS
 select * from employeeData
 
 
---8.Display the employee  lastname that contains letter “J” (Use the previous view created in Q#7)
+--8.Display the employee  lastname that contains letter â€œJâ€ (Use the previous view created in Q#7)
 
 SELECT EmpLname 
 FROM employeeData
 WHERE EmpLname LIKE '%J'
 
 
---9.Create view named “v_dept” that will display the department# and department name
+--9.Create view named â€œv_deptâ€ that will display the department# and department name
 
 create or alter view v_dept 
 AS
@@ -316,7 +316,7 @@ select * from v_dept
 --===================== Part 03 ================================
 ----------------------------------------------------------------
 Use ITI 
---1.Create a view “V1” that displays student data for students who live in Alex or Cairo. 
+--1.Create a view â€œV1â€ that displays student data for students who live in Alex or Cairo. 
 Create OR Alter View V1
 As
     Select *
@@ -335,7 +335,7 @@ Where st_address='alex'
 
 
 use [SD32-Company]
---1.Create view named “v_dept” that will display the department# and department name
+--1.Create view named â€œv_deptâ€ that will display the department# and department name
 Create or ALter View v_dept
 As
     Select DeptNo , DeptName
@@ -344,12 +344,12 @@ As
 -- Run
 select * from v_dept
 
---2.using the previous view try enter new department data where dept# is ’d4’ and dept name is ‘Development’
+--2.using the previous view try enter new department data where dept# is â€™d4â€™ and dept name is â€˜Developmentâ€™
 insert into v_dept
 Values (4,'Development')
 
 
---3.Create view name “v_2006_check” that will display employee Number, the project Number where he works and the date of joining the project which must be from the first of January and the last of December 2006.this view will be used to insert data so make sure that the coming new data must match the condition
+--3.Create view name â€œv_2006_checkâ€ that will display employee Number, the project Number where he works and the date of joining the project which must be from the first of January and the last of December 2006.this view will be used to insert data so make sure that the coming new data must match the condition
 CREATE OR ALTER VIEW v_2006_check
 AS
 SELECT W.empno, W.projectno, W.enter_date
